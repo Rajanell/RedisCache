@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rajanell.Model\Rajanell.RedisCache.Model.csproj" />
-    <ProjectReference Include="..\Rajanell.Services\Rajanell.RedisCache.Services.csproj" />
+    <ProjectReference Include="..\Rajanell.RedisCache.Model\Rajanell.RedisCache.Model.csproj" />
+    <ProjectReference Include="..\Rajanell.RedisCache.Services\Rajanell.RedisCache.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
