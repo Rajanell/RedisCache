@@ -10,13 +10,13 @@ namespace Rajanell.Test
     [TestClass]
     public class RedisServiceTest
     {
-        private IRedisService _configurationService;
+        private IRedisService _redisService;
         private IServiceProvider _serviceProvider;
         [TestInitialize]
         public void Initialize()
         {
             _serviceProvider = ServicesProvider.GetServiceProvider();
-            _configurationService = _serviceProvider.GetService<IRedisService>();
+            _redisService = _serviceProvider.GetService<IRedisService>();
         }
         [TestMethod]
         public async Task GetConfigurationTest()
@@ -28,9 +28,9 @@ namespace Rajanell.Test
                 Username = "TestName"
             };
 
-            await _configurationService.AddRecord(profileId.ToString(), data);
+            await _redisService.AddRecord(profileId.ToString(), data);
 
-            var result = await _configurationService.GetRecord<Profile>(profileId.ToString());
+            var result = await _redisService.GetRecord<Profile>(profileId.ToString());
             Assert.AreEqual(result.ProfileId, profileId);
         }
     }
