@@ -10,3 +10,9 @@
       "Redis": "localhost:5002"
     }
 
+###### Run commands on redis cli
+```
+  - docker exec -it my-redis sh
+  - redis-cli
+  - ping
+```
